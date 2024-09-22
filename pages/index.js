@@ -4,22 +4,20 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
-  ListItem,
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear, BioDetails } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoGoogle, IoLogoInstagram, IoLogoGithub, IoLogoWebComponent } from 'react-icons/io5'
 import Image from 'next/image'
-import Head from 'next/head'
+import BioList from '../components/BioList'
+import SocialLinks from '../components/SocialLinks'
+import { bioData, socialLinks } from '../components/config/bio'
+
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -44,14 +42,6 @@ const Home = () => (
             Pawan Kumar
           </Heading>
           <p>Software Developer</p>
-        </Box>
-        <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          textAlign="center"
-        >
-          
         </Box>
       </Box>
 
@@ -84,38 +74,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
-        {/* <BioSection>
-
-          <BioYear>Oct 2022 to Apr 2023 </BioYear>
-
-          <span>Worked as Software Developer Intern at FinacPlus in Bangalore / Bengaluru. </span>
-
-        </BioSection> */}
-
-<BioSection>
-  <BioYear>Oct 2022 to Apr 2023</BioYear>
-  <BioDetails>Worked as Software Developer Intern at FinacPlus in Bangalore / Bengaluru.</BioDetails>
-</BioSection>
-
-        <BioSection>
-          <BioYear>Feb 2022 to Apr 2022 </BioYear>
-<BioDetails > Worked as Asp.net developer Intern at  Toshal-Infotech in Surat.</BioDetails>
-         
-        </BioSection>
-
-        <BioSection>
-          <BioYear>Jun 2021 to Jul 2021 </BioYear>
-
-         <BioDetails>Worked as
-          Python-Django Intern at  Akash Technolabs.</BioDetails> 
-        </BioSection>
-
-
-        <BioSection>
-          <BioYear>Aug 2018 to Jul 2022</BioYear>
-        <BioDetails>Completed B.E. in Information Technology
-          from GTU with overall CGPA of 8.30.</BioDetails> 
-        </BioSection>
+        <BioList bioData={bioData} />
       </Section>
 
       <Section delay={0.3}>
@@ -132,41 +91,7 @@ const Home = () => (
           On the web
         </Heading>
         <List>
-          <ListItem>
-            <Link href="https://github.com/p1kmr" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
-              >
-                @p1kmr
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://drive.google.com/drive/folders/16bjyfPH7ZWyWG8_6WEyacC7RbnEcmB_I?usp=sharing" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoWebComponent />}
-              >
-                Resume
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="mailto:kmrpawan320@gmail.com" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGoogle />}
-              >
-                kmrpawan320@gmail.com
-              </Button>
-            </Link>
-
-          </ListItem>
-
+          <SocialLinks socialLinks={socialLinks} />
         </List>
       </Section>
     </Container>

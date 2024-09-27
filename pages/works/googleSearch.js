@@ -10,42 +10,40 @@ import {
   import { Title, WorkImage, Meta } from '../../components/work'
   import P from '../../components/paragraph'
   import Layout from '../../components/layouts/article'
-  
+  import { GOOGLE_SEARCH_DETAILS } from '../../components/constants'
+
   const Work = () => (
-    <Layout title="OpSearch">
+    <Layout title={GOOGLE_SEARCH_DETAILS.title}>
       <Container>
         <Title>
-          Op-search
+          {GOOGLE_SEARCH_DETAILS.title}
         </Title>
         <P>
-         Built a Search Engine powered by Google API
-with full search functionality and Pagination
-which gives multiple search result pages.
-
+          {GOOGLE_SEARCH_DETAILS.description}
         </P>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>Website</Meta>
-            <Link href="https://op-search.vercel.app/">
-            https://op-search.vercel.app/ <ExternalLinkIcon mx="2px" />
+            <Link href={GOOGLE_SEARCH_DETAILS.website}>
+              {GOOGLE_SEARCH_DETAILS.website} <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
             <Meta>Platform</Meta>
-            <span>Windows/macOS/Linux/iOS/Android</span>
+            <span>{GOOGLE_SEARCH_DETAILS.platform}</span>
           </ListItem>
           <ListItem>
             <Meta>Stack</Meta>
-            <span>Google API,Tailwind CSS,Next.js(React).</span>
+            <span>{GOOGLE_SEARCH_DETAILS.stack}</span>
           </ListItem>
         </List>
-  
-        <WorkImage src="/images/works/opsearch_01.png" alt="OpSearch" />
-         
+
+        {GOOGLE_SEARCH_DETAILS.images.map((image, index) => (
+          <WorkImage key={index} src={image.src} alt={image.alt} />
+        ))}
       </Container>
     </Layout>
   )
-  
+
   export default Work
   export { getServerSideProps } from '../../components/chakra'
-  

@@ -8,6 +8,7 @@ import thumbWalknote from '../public/images/works/dca_eyecatch.png'
 import thumbFourPainters from '../public/images/works/letsShop.png'
 import thumbMenkiki from '../public/images/works/notepad_01.png'
 import thumbTodoApp from '../public/images/works/todoApp_01.png'
+import thumbFastFit from '../public/images/works/fastfit_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -18,10 +19,17 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
+          <WorkGridItem id="fastfit" title="FastFit [Freelance]" thumbnail={thumbFastFit}>
+            Admin panel for managing FastFit's 100+ workouts, 600+ meal plans, 55+ meditation sessions and 34+ yoga programs.
+          </WorkGridItem>
+        </Section>
+        
+        <Section>
           <WorkGridItem id="docsapp" title="Docsapp" thumbnail={thumbInkdrop}>
             Document App like Google Docs used to take notes edit documents in realtime
           </WorkGridItem>
         </Section>
+
         <Section>
           <WorkGridItem
             id="googleSearch"
@@ -29,10 +37,10 @@ const Works = () => (
             thumbnail={thumbWalknote}
           >
             Built a Search Engine powered by Google API
-with full search functionality and Pagination
-which gives multiple search result pages.
+            with full search functionality and Pagination
+            which gives multiple search result pages.
 
-          </WorkGridItem>
+         </WorkGridItem>
         </Section>
 
         <Section delay={0.1}>
@@ -41,10 +49,9 @@ which gives multiple search result pages.
             title="Let's Shop"
             thumbnail={thumbFourPainters}
           >
-           Built an e-commerce website with basic shopping functionalities.
+            Built an e-commerce website with basic shopping functionalities.
           </WorkGridItem>
         </Section>
-
 
         <Section delay={0.1}>
           <WorkGridItem id="notepadApp" thumbnail={thumbMenkiki} title="Notepad Clone">
@@ -54,9 +61,8 @@ which gives multiple search result pages.
 
         <Section delay={0.1}>
           <WorkGridItem id="todoApp" thumbnail={thumbTodoApp} title="Todo app">
-           Todo application using Spring framework.  </WorkGridItem>
+            Todo application using Spring framework.  </WorkGridItem>
         </Section>
-
 
       </SimpleGrid>
     </Container>

@@ -9,6 +9,7 @@ import thumbFourPainters from '../public/images/works/letsShop.png'
 import thumbMenkiki from '../public/images/works/notepad_01.png'
 import thumbTodoApp from '../public/images/works/todoApp_01.png'
 import thumbFastFit from '../public/images/works/fastfit_eyecatch.png'
+import thumbWhere2 from '../public/images/works/where2_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -21,6 +22,12 @@ const Works = () => (
         <Section>
           <WorkGridItem id="fastfit" title="FastFit [Freelance]" thumbnail={thumbFastFit}>
             Admin panel for managing FastFit's 100+ workouts, 600+ meal plans, 55+ meditation sessions and 34+ yoga programs.
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.1}>
+          <WorkGridItem id="where2" title="Where2 [Freelance]" thumbnail={thumbWhere2}>
+            Admin panel for Where2's (Clubs & Bars): oversees establishments, manages user roles, and provides owner-specific dashboards.
           </WorkGridItem>
         </Section>
         

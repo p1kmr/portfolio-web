@@ -34,3 +34,17 @@ export const FASTFIT_DETAILS = {
     { src: "/images/works/fastfit_meals.png", alt: "FastFit Meals" }
   ]
 };
+
+export const WHERE2_DETAILS = {
+  title: "Where2",
+  description: "Where2's (Clubs & Bars) interface lets bar owners manage their own properties while administrators can oversee all businesses and their owners. Features include owner-specific dashboards, bar details editing, and user role administration.",
+  website: "https://where2llc.app/",
+  platform: "Web",
+  stack: "React, Tailwind CSS, Context API",
+  teamSize: 3,
+  images: [
+    { src: "/images/works/where2_eyecatch.png", alt: "Where2" },
+    { src: "/images/works/where2_est.png", alt: "Where2 Establishments" },
+    { src: "/images/works/where2_add_est.png", alt: "Where2 Add Establishment" }
+  ]
+};

@@ -53,7 +53,7 @@ const Home = () => (
           Pawan Kumar, from Chikhli, Gujarat, is a highly skilled and motivated individual with a Bachelor's degree in Information Technology from Gujarat Technological University.
           <p>
             Apart from development works, he is passionate about problem-solving with Data Structures and Algorithms, continuously improving his skills on&nbsp;
-            <NextLink href="https://leetcode.com/p1kmr" passHref scroll={false}>
+            <NextLink href="https://leetcode.com/p1kmr2" passHref scroll={false}>
               <Link>LeetCode.</Link>
             </NextLink> He also has a strong understanding of Computer Networks and enjoys playing &nbsp;
             <NextLink href="https://www.chess.com/member/p_one420" passHref scroll={false}>

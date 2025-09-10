@@ -1,7 +1,7 @@
 export const bioData = [
   {
     period: "Jun 2023 to Present",
-    details: "Software Engineer at Stryker, Bengaluru. Working with Scala, Java, Angular, and MariaDB."
+    details: "Software Engineer at Stryker, Bengaluru. Working with Java, Springboot, kotlin, Angular, ReactJS,  confluent kakfa and MariaDB, Microsoft Lakehouse, warehouse."
   },
   {
     period: "Oct 2022 to Apr 2023",

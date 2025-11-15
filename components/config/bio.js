@@ -29,7 +29,7 @@ export const socialLinks = [
   },
   {
     name: "Resume",
-    href: "https://drive.google.com/drive/folders/16bjyfPH7ZWyWG8_6WEyacC7RbnEcmB_I?usp=sharing",
+    href: "https://drive.google.com/drive/folders/1tXIdKYvl96B6GxZBfUTusRBBGfHCooue?usp=drive_link",
     icon: "IoLogoWebComponent"
   },
   {

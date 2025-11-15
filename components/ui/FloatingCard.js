@@ -10,6 +10,7 @@ const FloatingCard = ({
   hover = true,
   ...props
 }) => {
+  // Static style definitions (no hooks)
   const glassLight = {
     background: 'rgba(255, 255, 255, 0.7)',
     backdropFilter: 'blur(10px) saturate(180%)',
@@ -38,22 +39,25 @@ const FloatingCard = ({
     border: '1px solid rgba(255, 255, 255, 0.05)'
   }
 
+  // All hook calls at the top level
   const cardStyle = useColorModeValue(
     variant === 'glass' ? glassLight : elevatedLight,
     variant === 'glass' ? glassDark : elevatedDark
   )
 
+  const hoverShadow = useColorModeValue(
+    variant === 'glass'
+      ? '0 12px 40px 0 rgba(31, 38, 135, 0.25)'
+      : '0 20px 50px -10px rgba(0, 0, 0, 0.15)',
+    variant === 'glass'
+      ? '0 12px 40px 0 rgba(0, 0, 0, 0.5)'
+      : '0 20px 50px -10px rgba(0, 0, 0, 0.7)'
+  )
+
   const hoverStyle = hover
     ? {
         transform: 'translateY(-4px)',
-        boxShadow: useColorModeValue(
-          variant === 'glass'
-            ? '0 12px 40px 0 rgba(31, 38, 135, 0.25)'
-            : '0 20px 50px -10px rgba(0, 0, 0, 0.15)',
-          variant === 'glass'
-            ? '0 12px 40px 0 rgba(0, 0, 0, 0.5)'
-            : '0 20px 50px -10px rgba(0, 0, 0, 0.7)'
-        )
+        boxShadow: hoverShadow
       }
     : {}
 

@@ -10,52 +10,68 @@ const AnimatedButton = ({
   showIcon = false,
   ...props
 }) => {
-  const gradientLight = 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)'
-  const gradientDark = 'linear-gradient(135deg, #a78bfa 0%, #ec4899 100%)'
-  const gradient = useColorModeValue(gradientLight, gradientDark)
+  // All hook calls at the top level
+  const gradientBg = useColorModeValue(
+    'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+    'linear-gradient(135deg, #a78bfa 0%, #ec4899 100%)'
+  )
+
+  const gradientShadow = useColorModeValue(
+    '0 10px 25px -5px rgba(99, 102, 241, 0.4)',
+    '0 10px 25px -5px rgba(167, 139, 250, 0.4)'
+  )
+
+  const glassBg = useColorModeValue(
+    'rgba(255, 255, 255, 0.1)',
+    'rgba(0, 0, 0, 0.2)'
+  )
+
+  const glassHoverBg = useColorModeValue(
+    'rgba(255, 255, 255, 0.2)',
+    'rgba(255, 255, 255, 0.1)'
+  )
+
+  const glassBorder = useColorModeValue(
+    '1px solid rgba(255, 255, 255, 0.2)',
+    '1px solid rgba(255, 255, 255, 0.1)'
+  )
+
+  const glassColor = useColorModeValue('#0f172a', '#f8fafc')
+
+  const neonColor = useColorModeValue('#6366f1', '#a78bfa')
+
+  const neonShadow = useColorModeValue(
+    '0 0 20px rgba(99, 102, 241, 0.5)',
+    '0 0 20px rgba(167, 139, 250, 0.6)'
+  )
 
   const variants = {
     gradient: {
-      background: gradient,
+      background: gradientBg,
       color: 'white',
       _hover: {
         transform: 'translateY(-2px)',
-        boxShadow: useColorModeValue(
-          '0 10px 25px -5px rgba(99, 102, 241, 0.4)',
-          '0 10px 25px -5px rgba(167, 139, 250, 0.4)'
-        )
+        boxShadow: gradientShadow
       }
     },
     glass: {
-      background: useColorModeValue(
-        'rgba(255, 255, 255, 0.1)',
-        'rgba(0, 0, 0, 0.2)'
-      ),
+      background: glassBg,
       backdropFilter: 'blur(10px) saturate(180%)',
       WebkitBackdropFilter: 'blur(10px) saturate(180%)',
-      border: useColorModeValue(
-        '1px solid rgba(255, 255, 255, 0.2)',
-        '1px solid rgba(255, 255, 255, 0.1)'
-      ),
-      color: useColorModeValue('#0f172a', '#f8fafc'),
+      border: glassBorder,
+      color: glassColor,
       _hover: {
-        background: useColorModeValue(
-          'rgba(255, 255, 255, 0.2)',
-          'rgba(255, 255, 255, 0.1)'
-        ),
+        background: glassHoverBg,
         transform: 'translateY(-2px)'
       }
     },
     neon: {
       background: 'transparent',
-      color: useColorModeValue('#6366f1', '#a78bfa'),
+      color: neonColor,
       border: '2px solid',
-      borderColor: useColorModeValue('#6366f1', '#a78bfa'),
+      borderColor: neonColor,
       _hover: {
-        boxShadow: useColorModeValue(
-          '0 0 20px rgba(99, 102, 241, 0.5)',
-          '0 0 20px rgba(167, 139, 250, 0.6)'
-        ),
+        boxShadow: neonShadow,
         transform: 'translateY(-2px)'
       }
     }

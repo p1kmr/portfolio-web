@@ -101,15 +101,15 @@ const VoxelDog = () => {
       hemiLight.position.set(0, 20, 0)
       scene.add(hemiLight)
 
-      // Point light (accent/rim light)
-      const pointLight = new THREE.PointLight(0x88ccca, 0.8)
+      // Point light (accent/rim light) - using new theme teal color
+      const pointLight = new THREE.PointLight(0x14b8a6, 0.8)
       pointLight.position.set(-5, 5, -5)
       scene.add(pointLight)
 
-      // Add ground plane with shadow
+      // Add ground plane with shadow - using new theme teal color
       const groundGeometry = new THREE.CircleGeometry(10, 64)
       const groundMaterial = new THREE.MeshStandardMaterial({
-        color: 0x88ccca,
+        color: 0x14b8a6,
         opacity: 0.1,
         transparent: true,
         roughness: 0.8,

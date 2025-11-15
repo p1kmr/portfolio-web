@@ -48,3 +48,35 @@ export const WHERE2_DETAILS = {
     { src: "/images/works/where2_add_est.png", alt: "Where2 Add Establishment" }
   ]
 };
+
+export const WEDPLANAI_DETAILS = {
+  title: "WedPlanAI",
+  description: "An AI-powered wedding planning platform that automates vendor discovery, negotiation, and coordination. Features AI voice calling agents that negotiate with vendors, intelligent budget management, and comprehensive wedding timeline creation.",
+  website: "https://wedplanai.com/",
+  platform: "Web",
+  stack: "React, Vite, Node.js, Supabase, Vapi, ElevenLabs, Tailwind CSS, Vercel, Railway, webhooks",
+  tools: "Cursor Editor, Claude AI, Supabase MCP, Playwright MCP",
+  teamSize: 2,
+  images: [
+    { src: "/images/works/wedplanai_01.png", alt: "WedPlanAI Dashboard" },
+    { src: "/images/works/wedplanai_02.png", alt: "WedPlanAI Vendor Search" },
+    { src: "/images/works/wedplanai_03.png", alt: "WedPlanAI AI Calling" }
+  ]
+};
+
+export const AIVISION_DETAILS = {
+  title: "AI Vision App",
+  description: "A real-time AI-powered vision and audio conversation app that enables users to interact with AI through camera and microphone. Features live video analysis, voice conversations, multi-provider AI support (OpenAI & Google Gemini), and secure Google authentication with disposable email blocking.",
+  website: "https://ai-vision-app-4wak.onrender.com/",
+  platform: "Web",
+  stack: "Next.js, React, OpenAI Realtime API (GPT-4o, GPT-4o Mini), Google Gemini Realtime API (Gemini 2.0 Flash), Firebase, WebSocket, Tailwind CSS",
+  tools: "Cursor IDE, Claude AI, Playwright MCP",
+  teamSize: 2,
+  images: [
+    { src: "/images/works/aivision_01.png", alt: "AI Vision App - Camera Interface" },
+    { src: "/images/works/aivision_02.png", alt: "AI Vision App - Live Audio Talk" },
+    { src: "/images/works/aivision_03.png", alt: "AI Vision App - Model Selection" }
+  ]
+};
+
+

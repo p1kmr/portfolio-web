@@ -10,6 +10,8 @@ import thumbMenkiki from '../public/images/works/notepad_01.png'
 import thumbTodoApp from '../public/images/works/todoApp_01.png'
 import thumbFastFit from '../public/images/works/fastfit_eyecatch.png'
 import thumbWhere2 from '../public/images/works/where2_eyecatch.png'
+import thumbWedPlanAI from '../public/images/works/wedplanai_eyecatch.png'
+import thumbAIVision from '../public/images/works/aivision_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -20,14 +22,26 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
+          <WorkGridItem id="wedplanai" title="WedPlanAI" thumbnail={thumbWedPlanAI}>
+            AI-powered wedding planning platform with automated vendor discovery, AI voice calling agents for negotiations, and intelligent budget management.
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.1}>
           <WorkGridItem id="fastfit" title="FastFit [Freelance]" thumbnail={thumbFastFit}>
             Admin panel for managing FastFit's 100+ workouts, 600+ meal plans, 55+ meditation sessions and 34+ yoga programs.
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.1}>
+        <Section>
           <WorkGridItem id="where2" title="Where2 [Freelance]" thumbnail={thumbWhere2}>
             Admin panel for Where2's (Clubs & Bars): oversees establishments, manages user roles, and provides owner-specific dashboards.
+          </WorkGridItem>
+        </Section>
+
+        <Section delay={0.1}>
+          <WorkGridItem id="aivision" title="AI Vision App" thumbnail={thumbAIVision}>
+            Real-time AI vision and audio conversation app with live video analysis, voice conversations, and multi-provider AI support (OpenAI & Google Gemini).
           </WorkGridItem>
         </Section>
         

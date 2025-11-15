@@ -1,0 +1,17 @@
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[redirects]]
+  from = "/_next/image*"
+  to = "/.netlify/builders/_next/image"
+  status = 200
+
+[[headers]]
+  for = "/_next/image*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+

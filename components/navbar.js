@@ -20,14 +20,28 @@ import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
+  const activeGradient = useColorModeValue(
+    'linear-gradient(135deg, #6366f1 0%, #14b8a6 100%)',
+    'linear-gradient(135deg, #a78bfa 0%, #2dd4bf 100%)'
+  )
+
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
-        p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        px={3}
+        py={2}
+        borderRadius="md"
+        background={active ? activeGradient : 'transparent'}
+        color={active ? 'white' : inactiveColor}
+        fontWeight={active ? 'semibold' : 'medium'}
         target={target}
+        transition="all 0.2s ease-in-out"
+        _hover={{
+          background: active ? activeGradient : useColorModeValue('rgba(99, 102, 241, 0.1)', 'rgba(167, 139, 250, 0.1)'),
+          transform: 'translateY(-1px)',
+          textDecoration: 'none'
+        }}
         {...props}
       >
         {children}
@@ -44,8 +58,17 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ backdropFilter: 'blur(10px)' }}
+      bg={useColorModeValue('rgba(255, 255, 255, 0.8)', 'rgba(15, 15, 15, 0.8)')}
+      css={{
+        backdropFilter: 'blur(20px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(20px) saturate(180%)'
+      }}
+      boxShadow={useColorModeValue(
+        '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+        '0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2)'
+      )}
+      borderBottom="1px solid"
+      borderColor={useColorModeValue('rgba(0, 0, 0, 0.05)', 'rgba(255, 255, 255, 0.05)')}
       zIndex={2}
       {...props}
     >

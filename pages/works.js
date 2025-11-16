@@ -81,7 +81,7 @@ const Works = () => (
             id="docsapp"
             title="Docsapp"
             thumbnail={thumbInkdrop}
-            tags={['Real-time', 'Collaboration', 'Editor']}
+            tags={['Collaboration', 'Editor']}
           >
             Document App like Google Docs used to take notes edit documents in realtime
           </WorkGridItem>

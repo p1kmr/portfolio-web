@@ -8,6 +8,10 @@ export const BioSection = ({ children, index, ...props }) => {
   const dotBg = useColorModeValue('white', '#1a1a1a')
   const dotBorder = useColorModeValue('brand.500', 'brand.400')
   const hoverBg = useColorModeValue('gray.50', 'whiteAlpha.50')
+  const dotHoverShadow = useColorModeValue(
+    '0 0 20px rgba(99, 102, 241, 0.5)',
+    '0 0 20px rgba(167, 139, 250, 0.5)'
+  )
 
   return (
     <MotionBox
@@ -25,10 +29,7 @@ export const BioSection = ({ children, index, ...props }) => {
       _hover={{
         '& .bio-dot': {
           transform: 'scale(1.3)',
-          boxShadow: useColorModeValue(
-            '0 0 20px rgba(99, 102, 241, 0.5)',
-            '0 0 20px rgba(167, 139, 250, 0.5)'
-          )
+          boxShadow: dotHoverShadow
         }
       }}
       {...props}

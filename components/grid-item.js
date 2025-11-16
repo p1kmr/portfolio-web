@@ -29,6 +29,22 @@ export const WorkGridItem = ({ children, id, title, thumbnail, tags }) => {
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200')
   const hoverBorderColor = useColorModeValue('brand.500', 'brand.400')
   const textColor = useColorModeValue('gray.600', 'gray.400')
+  const hoverShadow = useColorModeValue(
+    '0 20px 40px -10px rgba(0, 0, 0, 0.1)',
+    '0 20px 40px -10px rgba(0, 0, 0, 0.5)'
+  )
+  const overlayGradient = useColorModeValue(
+    'linear(to-b, transparent, rgba(255,255,255,0.8))',
+    'linear(to-b, transparent, rgba(0,0,0,0.8))'
+  )
+  const titleGradient = useColorModeValue(
+    'linear(to-r, brand.600, accent.600)',
+    'linear(to-r, brand.400, accent.400)'
+  )
+  const titleHoverGradient = useColorModeValue(
+    'linear(to-r, brand.500, accent.500)',
+    'linear(to-r, brand.300, accent.300)'
+  )
 
   return (
     <NextLink href={`/works/${id}`} passHref scroll={false}>
@@ -46,10 +62,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail, tags }) => {
           }}
           _hover={{
             borderColor: hoverBorderColor,
-            boxShadow: useColorModeValue(
-              '0 20px 40px -10px rgba(0, 0, 0, 0.1)',
-              '0 20px 40px -10px rgba(0, 0, 0, 0.5)'
-            )
+            boxShadow: hoverShadow
           }}
         >
           {/* Image Container with Overlay */}
@@ -74,10 +87,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail, tags }) => {
               left={0}
               right={0}
               bottom={0}
-              bgGradient={useColorModeValue(
-                'linear(to-b, transparent, rgba(255,255,255,0.8))',
-                'linear(to-b, transparent, rgba(0,0,0,0.8))'
-              )}
+              bgGradient={overlayGradient}
               opacity={0}
               transition="opacity 0.3s ease"
               _groupHover={{ opacity: 1 }}
@@ -91,16 +101,10 @@ export const WorkGridItem = ({ children, id, title, thumbnail, tags }) => {
                 fontSize="xl"
                 fontWeight="bold"
                 mb={2}
-                bgGradient={useColorModeValue(
-                  'linear(to-r, brand.600, accent.600)',
-                  'linear(to-r, brand.400, accent.400)'
-                )}
+                bgGradient={titleGradient}
                 bgClip="text"
                 _hover={{
-                  bgGradient: useColorModeValue(
-                    'linear(to-r, brand.500, accent.500)',
-                    'linear(to-r, brand.300, accent.300)'
-                  )
+                  bgGradient: titleHoverGradient
                 }}
               >
                 {title}

@@ -39,13 +39,6 @@ const Footer = () => {
         >
           © {new Date().getFullYear()} Pawan Kumar. All Rights Reserved.
         </Text>
-        <Text
-          fontSize="xs"
-          mt={2}
-          color={useColorModeValue('gray.500', 'gray.500')}
-        >
-          Built with Next.js, Chakra UI & Three.js
-        </Text>
       </Box>
     </MotionBox>
   )

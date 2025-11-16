@@ -70,7 +70,7 @@ const Works = () => (
             id="aivision"
             title="AI Vision App"
             thumbnail={thumbAIVision}
-            tags={['AI', 'Computer Vision', 'Real-time']}
+            tags={['AI', 'WebSocket', 'Real-time']}
           >
             Real-time AI vision and audio conversation app with live video analysis, voice conversations, and multi-provider AI support (OpenAI & Google Gemini).
           </WorkGridItem>

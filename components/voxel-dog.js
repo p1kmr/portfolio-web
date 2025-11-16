@@ -67,7 +67,7 @@ const VoxelDog = () => {
       setRenderer(renderer)
 
       // Adjusted camera scale for better view
-      const scale = scH * 0.008 + 6.5
+      const scale = scH * 0.007 + 5.5
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -133,7 +133,7 @@ const VoxelDog = () => {
       loadGLTFModel(scene, '/spiderMan.glb', {
         receiveShadow: true,
         castShadow: true,
-        scale: 2.5 // Increased scale to make model more visible
+        scale: 3.5 // Increased scale to make model more visible
       }).then(model => {
         refModel.current = model
         animate()

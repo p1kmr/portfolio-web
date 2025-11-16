@@ -66,7 +66,7 @@ export const WEDPLANAI_DETAILS = {
 
 export const AIVISION_DETAILS = {
   title: "AI Vision App",
-  description: "A real-time AI-powered vision and audio conversation app that enables users to interact with AI through camera and microphone. Features live video analysis, voice conversations, multi-provider AI support (OpenAI & Google Gemini), and secure Google authentication with disposable email blocking.",
+  description: "A real-time AI-powered vision and audio conversation app that enables users to interact with AI through camera and microphone. Features live video analysis, voice conversations, multi-provider AI support (OpenAI & Google Gemini), WebSocket communication, and secure Google authentication with disposable email blocking.",
   website: "https://ai-vision-app-4wak.onrender.com/",
   platform: "Web",
   stack: "Next.js, React, OpenAI Realtime API (GPT-4o, GPT-4o Mini), Google Gemini Realtime API (Gemini 2.0 Flash), Firebase, WebSocket, Tailwind CSS",

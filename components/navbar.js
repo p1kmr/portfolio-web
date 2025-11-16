@@ -25,6 +25,10 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
     'linear-gradient(135deg, #6366f1 0%, #14b8a6 100%)',
     'linear-gradient(135deg, #a78bfa 0%, #2dd4bf 100%)'
   )
+  const hoverBg = useColorModeValue(
+    'rgba(99, 102, 241, 0.1)',
+    'rgba(167, 139, 250, 0.1)'
+  )
 
   return (
     <NextLink href={href} passHref scroll={false}>
@@ -38,7 +42,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
         target={target}
         transition="all 0.2s ease-in-out"
         _hover={{
-          background: active ? activeGradient : useColorModeValue('rgba(99, 102, 241, 0.1)', 'rgba(167, 139, 250, 0.1)'),
+          background: active ? activeGradient : hoverBg,
           transform: 'translateY(-1px)',
           textDecoration: 'none'
         }}

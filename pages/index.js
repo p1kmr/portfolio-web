@@ -35,6 +35,31 @@ const Home = () => {
     'linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(45, 212, 191, 0.1) 100%)'
   )
 
+  const taglineBoxShadow = useColorModeValue(
+    '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+    '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+  )
+
+  const taglineBorderColor = useColorModeValue(
+    'rgba(255, 255, 255, 0.3)',
+    'rgba(255, 255, 255, 0.1)'
+  )
+
+  const interestCardShadow = useColorModeValue(
+    '0 4px 12px rgba(0, 0, 0, 0.05)',
+    '0 4px 12px rgba(0, 0, 0, 0.3)'
+  )
+
+  const interestCardBorder = useColorModeValue(
+    'rgba(99, 102, 241, 0.1)',
+    'rgba(167, 139, 250, 0.1)'
+  )
+
+  const interestTextGradient = useColorModeValue(
+    'linear-gradient(135deg, #6366f1 0%, #14b8a6 100%)',
+    'linear-gradient(135deg, #a78bfa 0%, #2dd4bf 100%)'
+  )
+
   return (
     <Layout>
       {/* Hero Section with Tagline */}
@@ -53,15 +78,9 @@ const Home = () => {
               backdropFilter: 'blur(20px) saturate(180%)',
               WebkitBackdropFilter: 'blur(20px) saturate(180%)'
             }}
-            boxShadow={useColorModeValue(
-              '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
-              '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
-            )}
+            boxShadow={taglineBoxShadow}
             border="1px solid"
-            borderColor={useColorModeValue(
-              'rgba(255, 255, 255, 0.3)',
-              'rgba(255, 255, 255, 0.1)'
-            )}
+            borderColor={taglineBorderColor}
           >
             <Text
               fontSize={{ base: 'lg', md: 'xl' }}
@@ -171,24 +190,15 @@ const Home = () => {
                 borderRadius="xl"
                 textAlign="center"
                 background={interestCardBg}
-                boxShadow={useColorModeValue(
-                  '0 4px 12px rgba(0, 0, 0, 0.05)',
-                  '0 4px 12px rgba(0, 0, 0, 0.3)'
-                )}
+                boxShadow={interestCardShadow}
                 cursor="default"
                 border="1px solid"
-                borderColor={useColorModeValue(
-                  'rgba(99, 102, 241, 0.1)',
-                  'rgba(167, 139, 250, 0.1)'
-                )}
+                borderColor={interestCardBorder}
               >
                 <Text
                   fontSize={{ base: 'xl', md: '2xl' }}
                   fontWeight="bold"
-                  bgGradient={useColorModeValue(
-                    'linear-gradient(135deg, #6366f1 0%, #14b8a6 100%)',
-                    'linear-gradient(135deg, #a78bfa 0%, #2dd4bf 100%)'
-                  )}
+                  bgGradient={interestTextGradient}
                   bgClip="text"
                 >
                   {interest}

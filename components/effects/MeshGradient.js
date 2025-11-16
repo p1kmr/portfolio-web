@@ -25,7 +25,9 @@ const MeshGradient = ({
     { r: 192, g: 132, b: 252 }   // purple light
   ]
 
-  const gradientColors = colors || useColorModeValue(defaultColorsLight, defaultColorsDark)
+  // Always call hook at top level
+  const themeColors = useColorModeValue(defaultColorsLight, defaultColorsDark)
+  const gradientColors = colors || themeColors
 
   useEffect(() => {
     const canvas = canvasRef.current

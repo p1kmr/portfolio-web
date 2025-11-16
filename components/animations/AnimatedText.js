@@ -12,21 +12,23 @@ const AnimatedText = ({
   const text = typeof children === 'string' ? children : ''
   const MotionComponent = motion[as] || motion.p
 
+  // Always call hooks at top level
+  const [displayText, setDisplayText] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    // Only run for typewriter variant
+    if (variant === 'typewriter' && currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + text[currentIndex])
+        setCurrentIndex(prev => prev + 1)
+      }, duration * 1000)
+      return () => clearTimeout(timeout)
+    }
+  }, [variant, currentIndex, text, duration])
+
   // Typewriter effect
   if (variant === 'typewriter') {
-    const [displayText, setDisplayText] = useState('')
-    const [currentIndex, setCurrentIndex] = useState(0)
-
-    useEffect(() => {
-      if (currentIndex < text.length) {
-        const timeout = setTimeout(() => {
-          setDisplayText(prev => prev + text[currentIndex])
-          setCurrentIndex(prev => prev + 1)
-        }, duration * 1000)
-        return () => clearTimeout(timeout)
-      }
-    }, [currentIndex, text, duration])
-
     return (
       <MotionComponent
         initial={{ opacity: 0 }}

@@ -12,6 +12,7 @@ const VoxelDog = () => {
   const refContainer = useRef()
   const refModel = useRef()
   const [loading, setLoading] = useState(true)
+  const [loadingProgress, setLoadingProgress] = useState(0)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
@@ -130,13 +131,23 @@ const VoxelDog = () => {
       setControls(controls)
 
       // Load SpiderMan model with increased scale (using optimized spiderMan2.glb)
-      loadGLTFModel(scene, '/spiderMan2.glb', {
-        receiveShadow: true,
-        castShadow: true,
-        scale: 3.5 // Increased scale to make model more visible
-      }).then(model => {
+      loadGLTFModel(
+        scene,
+        '/spiderMan2.glb',
+        {
+          receiveShadow: true,
+          castShadow: true,
+          scale: 3.5 // Increased scale to make model more visible
+        },
+        (progress) => {
+          setLoadingProgress(progress)
+        }
+      ).then(model => {
         refModel.current = model
         animate()
+        setLoading(false)
+      }).catch(error => {
+        console.error('Error loading 3D model:', error)
         setLoading(false)
       })
 
@@ -194,7 +205,9 @@ const VoxelDog = () => {
   }, [renderer, handleWindowResize, handleMouseMove])
 
   return (
-    <DogContainer ref={refContainer}>{loading && <DogSpinner />}</DogContainer>
+    <DogContainer ref={refContainer}>
+      {loading && <DogSpinner progress={loadingProgress} />}
+    </DogContainer>
   )
 }
 

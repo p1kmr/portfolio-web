@@ -1,15 +1,41 @@
 import { forwardRef } from 'react'
-import { Box, Spinner } from '@chakra-ui/react'
+import { Box, Spinner, Text, Progress } from '@chakra-ui/react'
 
-export const DogSpinner = () => (
-  <Spinner
-    size="xl"
+export const DogSpinner = ({ progress }) => (
+  <Box
     position="absolute"
     left="50%"
     top="50%"
-    ml="calc(0px - var(--spinner-size) / 2)"
-    mt="calc(0px - var(--spinner-size))"
-  />
+    transform="translate(-50%, -50%)"
+    textAlign="center"
+  >
+    <Spinner
+      size="xl"
+      thickness="4px"
+      speed="0.65s"
+      color="teal.400"
+      mb={4}
+    />
+    {progress > 0 && progress < 100 && (
+      <>
+        <Text fontSize="sm" color="gray.500" mb={2}>
+          Loading 3D Model...
+        </Text>
+        <Progress
+          value={progress}
+          size="sm"
+          colorScheme="teal"
+          width="200px"
+          borderRadius="md"
+          hasStripe
+          isAnimated
+        />
+        <Text fontSize="xs" color="gray.400" mt={1}>
+          {Math.round(progress)}%
+        </Text>
+      </>
+    )}
+  </Box>
 )
 
 export const DogContainer = forwardRef(({ children }, ref) => (
@@ -30,7 +56,7 @@ export const DogContainer = forwardRef(({ children }, ref) => (
 const Loader = () => {
   return (
     <DogContainer>
-      <DogSpinner />
+      <DogSpinner progress={0} />
     </DogContainer>
   )
 }

@@ -123,7 +123,7 @@ const VoxelDog = () => {
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
-      controls.autoRotateSpeed = 0.5
+      controls.autoRotateSpeed = 1.2
       controls.target = target
       controls.enableDamping = true
       controls.dampingFactor = 0.05

@@ -3,6 +3,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import GradientHeading from '../components/ui/GradientHeading'
+import MetaTags from '../components/seo/meta-tags'
 
 import thumbInkdrop from '../public/images/works/docsapp_eyecatch.png'
 import thumbWalknote from '../public/images/works/dca_eyecatch.png'
@@ -16,6 +17,11 @@ import thumbAIVision from '../public/images/works/aivision_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
+    <MetaTags
+      title="Portfolio - Pawan Kumar | Projects & Works"
+      description="Explore my portfolio of projects including WedPlanAI, FastFit, AI Vision App, and more. Full-stack development with React, AI integration, and modern web technologies."
+      canonicalUrl="/works"
+    />
     <Container maxW="container.xl">
       <Box mb={10}>
         <GradientHeading

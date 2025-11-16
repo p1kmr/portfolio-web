@@ -20,7 +20,6 @@ import { bioData, socialLinks } from '../components/config/bio'
 import GradientHeading from '../components/ui/GradientHeading'
 import FloatingCard from '../components/ui/FloatingCard'
 import AnimatedButton from '../components/ui/AnimatedButton'
-import MetaTags from '../components/seo/meta-tags'
 import { motion } from 'framer-motion'
 
 const MotionBox = motion(Box)
@@ -38,11 +37,6 @@ const Home = () => {
 
   return (
     <Layout>
-      <MetaTags
-        title="Pawan Kumar - Software Engineer | Full Stack Developer"
-        description="Full-stack Software Engineer at Stryker with expertise in React, Java, Spring Boot, Kafka, and AI integration. Building innovative solutions with modern web technologies."
-        canonicalUrl="/"
-      />
       {/* Hero Section with Tagline */}
       <Box mb={12} mt={8}>
         <Container maxW="container.lg">

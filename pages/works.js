@@ -31,13 +31,13 @@ const Works = () => (
         </Text>
       </Box>
 
-      <SimpleGrid columns={[1, 1, 2, 3]} gap={8} spacing={8}>
+      <SimpleGrid columns={[1, 1, 2, 2]} gap={8} spacing={8}>
         <Section>
           <WorkGridItem
             id="wedplanai"
             title="WedPlanAI"
             thumbnail={thumbWedPlanAI}
-            tags={['AI', 'Full-Stack', 'Voice AI', 'React']}
+            tags={['Voice AI', 'Cursor IDE']}
           >
             AI-powered wedding planning platform with automated vendor discovery, AI voice calling agents for negotiations, and intelligent budget management.
           </WorkGridItem>
@@ -48,7 +48,7 @@ const Works = () => (
             id="fastfit"
             title="FastFit"
             thumbnail={thumbFastFit}
-            tags={['Freelance', 'Admin Panel', 'React']}
+            tags={['Freelance', 'Admin Panel', 'Form Handling']}
           >
             Admin panel for managing FastFit's 100+ workouts, 600+ meal plans, 55+ meditation sessions and 34+ yoga programs.
           </WorkGridItem>
@@ -59,7 +59,7 @@ const Works = () => (
             id="where2"
             title="Where2"
             thumbnail={thumbWhere2}
-            tags={['Freelance', 'Dashboard', 'Management']}
+            tags={['Freelance', 'Dashboard', 'Admin Panel']}
           >
             Admin panel for Where2's (Clubs & Bars): oversees establishments, manages user roles, and provides owner-specific dashboards.
           </WorkGridItem>
@@ -70,7 +70,7 @@ const Works = () => (
             id="aivision"
             title="AI Vision App"
             thumbnail={thumbAIVision}
-            tags={['AI', 'WebSocket', 'Real-time']}
+            tags={['NextJS', 'WebSockets', 'OpenAI API']}
           >
             Real-time AI vision and audio conversation app with live video analysis, voice conversations, and multi-provider AI support (OpenAI & Google Gemini).
           </WorkGridItem>
@@ -81,7 +81,7 @@ const Works = () => (
             id="docsapp"
             title="Docsapp"
             thumbnail={thumbInkdrop}
-            tags={['Collaboration', 'Editor']}
+            tags={['Editor', 'Firebase', 'Wysiwyg']}
           >
             Document App like Google Docs used to take notes edit documents in realtime
           </WorkGridItem>
@@ -92,7 +92,7 @@ const Works = () => (
             id="googleSearch"
             title="Search Engine"
             thumbnail={thumbWalknote}
-            tags={['Google API', 'Search', 'Pagination']}
+            tags={['Google API', 'Next.js', 'Pagination']}
           >
             Built a Search Engine powered by Google API with full search functionality and Pagination which gives multiple search result pages.
          </WorkGridItem>
@@ -114,7 +114,7 @@ const Works = () => (
             id="notepadApp"
             thumbnail={thumbMenkiki}
             title="Notepad Clone"
-            tags={['Desktop App', 'Editor', 'Clone']}
+            tags={['Desktop App', 'Editor']}
           >
             Created clone of notepad app.
           </WorkGridItem>
@@ -125,7 +125,7 @@ const Works = () => (
             id="todoApp"
             thumbnail={thumbTodoApp}
             title="Todo App"
-            tags={['Spring', 'Java', 'Backend']}
+            tags={['Spring MVC', 'Hibernate', 'Mysql']}
           >
             Todo application using Spring framework.
           </WorkGridItem>

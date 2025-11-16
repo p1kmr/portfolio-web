@@ -117,7 +117,13 @@ export const WorkGridItem = ({ children, id, title, thumbnail, tags }) => {
 
             {/* Tags */}
             {tags && tags.length > 0 && (
-              <HStack spacing={2} flexWrap="wrap">
+              <HStack
+                spacing={2}
+                flexWrap="nowrap"
+                width="fit-content"
+                justifyContent="flex-start"
+                display="flex"
+              >
                 {tags.slice(0, 3).map((tag, index) => (
                   <Badge
                     key={index}
@@ -126,6 +132,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail, tags }) => {
                     px={2}
                     py={1}
                     fontSize="xs"
+                    whiteSpace="nowrap"
                   >
                     {tag}
                   </Badge>

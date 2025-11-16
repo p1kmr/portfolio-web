@@ -1,7 +1,8 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Text, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
+import GradientHeading from '../components/ui/GradientHeading'
 
 import thumbInkdrop from '../public/images/works/docsapp_eyecatch.png'
 import thumbWalknote from '../public/images/works/dca_eyecatch.png'
@@ -15,74 +16,119 @@ import thumbAIVision from '../public/images/works/aivision_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
-    <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
-        Works
-      </Heading>
+    <Container maxW="container.xl">
+      <Box mb={10}>
+        <GradientHeading
+          as="h2"
+          fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+          mb={4}
+        >
+          Portfolio
+        </GradientHeading>
+        <Text fontSize="lg" opacity={0.8} maxW="2xl">
+          A collection of projects showcasing expertise in full-stack development,
+          AI integration, and modern web technologies.
+        </Text>
+      </Box>
 
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
+      <SimpleGrid columns={[1, 1, 2, 3]} gap={8} spacing={8}>
         <Section>
-          <WorkGridItem id="wedplanai" title="WedPlanAI" thumbnail={thumbWedPlanAI}>
+          <WorkGridItem
+            id="wedplanai"
+            title="WedPlanAI"
+            thumbnail={thumbWedPlanAI}
+            tags={['AI', 'Full-Stack', 'Voice AI', 'React']}
+          >
             AI-powered wedding planning platform with automated vendor discovery, AI voice calling agents for negotiations, and intelligent budget management.
           </WorkGridItem>
         </Section>
 
         <Section delay={0.1}>
-          <WorkGridItem id="fastfit" title="FastFit [Freelance]" thumbnail={thumbFastFit}>
+          <WorkGridItem
+            id="fastfit"
+            title="FastFit"
+            thumbnail={thumbFastFit}
+            tags={['Freelance', 'Admin Panel', 'React']}
+          >
             Admin panel for managing FastFit's 100+ workouts, 600+ meal plans, 55+ meditation sessions and 34+ yoga programs.
           </WorkGridItem>
         </Section>
 
-        <Section>
-          <WorkGridItem id="where2" title="Where2 [Freelance]" thumbnail={thumbWhere2}>
+        <Section delay={0.2}>
+          <WorkGridItem
+            id="where2"
+            title="Where2"
+            thumbnail={thumbWhere2}
+            tags={['Freelance', 'Dashboard', 'Management']}
+          >
             Admin panel for Where2's (Clubs & Bars): oversees establishments, manages user roles, and provides owner-specific dashboards.
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.1}>
-          <WorkGridItem id="aivision" title="AI Vision App" thumbnail={thumbAIVision}>
+        <Section delay={0.3}>
+          <WorkGridItem
+            id="aivision"
+            title="AI Vision App"
+            thumbnail={thumbAIVision}
+            tags={['AI', 'Computer Vision', 'Real-time']}
+          >
             Real-time AI vision and audio conversation app with live video analysis, voice conversations, and multi-provider AI support (OpenAI & Google Gemini).
           </WorkGridItem>
         </Section>
-        
-        <Section>
-          <WorkGridItem id="docsapp" title="Docsapp" thumbnail={thumbInkdrop}>
+
+        <Section delay={0.1}>
+          <WorkGridItem
+            id="docsapp"
+            title="Docsapp"
+            thumbnail={thumbInkdrop}
+            tags={['Real-time', 'Collaboration', 'Editor']}
+          >
             Document App like Google Docs used to take notes edit documents in realtime
           </WorkGridItem>
         </Section>
 
-        <Section>
+        <Section delay={0.2}>
           <WorkGridItem
             id="googleSearch"
-            title="Search Engine using Google API"
+            title="Search Engine"
             thumbnail={thumbWalknote}
+            tags={['Google API', 'Search', 'Pagination']}
           >
-            Built a Search Engine powered by Google API
-            with full search functionality and Pagination
-            which gives multiple search result pages.
-
+            Built a Search Engine powered by Google API with full search functionality and Pagination which gives multiple search result pages.
          </WorkGridItem>
         </Section>
 
-        <Section delay={0.1}>
+        <Section delay={0.3}>
           <WorkGridItem
             id="letsShop"
             title="Let's Shop"
             thumbnail={thumbFourPainters}
+            tags={['E-commerce', 'Shopping', 'Full-Stack']}
           >
             Built an e-commerce website with basic shopping functionalities.
           </WorkGridItem>
         </Section>
 
         <Section delay={0.1}>
-          <WorkGridItem id="notepadApp" thumbnail={thumbMenkiki} title="Notepad Clone">
+          <WorkGridItem
+            id="notepadApp"
+            thumbnail={thumbMenkiki}
+            title="Notepad Clone"
+            tags={['Desktop App', 'Editor', 'Clone']}
+          >
             Created clone of notepad app.
           </WorkGridItem>
         </Section>
 
-        <Section delay={0.1}>
-          <WorkGridItem id="todoApp" thumbnail={thumbTodoApp} title="Todo app">
-            Todo application using Spring framework.  </WorkGridItem>
+        <Section delay={0.2}>
+          <WorkGridItem
+            id="todoApp"
+            thumbnail={thumbTodoApp}
+            title="Todo App"
+            tags={['Spring', 'Java', 'Backend']}
+          >
+            Todo application using Spring framework.
+          </WorkGridItem>
         </Section>
 
       </SimpleGrid>

@@ -3,9 +3,31 @@ import Head from 'next/head'
 import { GridItemStyle } from '../grid-item'
 
 const variants = {
-  hidden: { opacity: 0, x: 0, y: 20 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: -0, y: 20 }
+  hidden: {
+    opacity: 0,
+    y: 20,
+    scale: 0.98
+  },
+  enter: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.6, -0.05, 0.01, 0.99],
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+    scale: 1.02,
+    transition: {
+      duration: 0.3,
+      ease: [0.6, -0.05, 0.01, 0.99]
+    }
+  }
 }
 
 const Layout = ({ children, title }) => {
@@ -16,7 +38,6 @@ const Layout = ({ children, title }) => {
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ duration: 0.4, type: 'easeInOut' }}
       style={{ position: 'relative' }}
     >
       <>

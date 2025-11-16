@@ -129,8 +129,8 @@ const VoxelDog = () => {
       controls.dampingFactor = 0.05
       setControls(controls)
 
-      // Load SpiderMan model with increased scale
-      loadGLTFModel(scene, '/spiderMan.glb', {
+      // Load SpiderMan model with increased scale (using optimized spiderMan2.glb)
+      loadGLTFModel(scene, '/spiderMan2.glb', {
         receiveShadow: true,
         castShadow: true,
         scale: 3.5 // Increased scale to make model more visible

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { Link, Text, Box } from '@chakra-ui/react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
@@ -205,9 +206,25 @@ const VoxelDog = () => {
   }, [renderer, handleWindowResize, handleMouseMove])
 
   return (
-    <DogContainer ref={refContainer}>
-      {loading && <DogSpinner progress={loadingProgress} />}
-    </DogContainer>
+    <>
+      <DogContainer ref={refContainer}>
+        {loading && <DogSpinner progress={loadingProgress} />}
+      </DogContainer>
+      {/* Source link for the Spider-Man model */}
+      <Box textAlign="center" mt={6} zIndex={1} position="relative" pointerEvents="auto">
+        <Text fontSize="sm" display="inline">
+          Model source:&nbsp;
+        </Text>
+        <Link
+          href="https://hyper3d.ai/rodin/fc170aca-6d39-48e1-b093-28103b573fab"
+          isExternal
+          color="teal.400"
+          _hover={{ textDecoration: 'underline' }}
+        >
+          hyper3d.ai
+        </Link>
+      </Box>
+    </>
   )
 }
 

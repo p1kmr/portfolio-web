@@ -48,7 +48,7 @@ const Works = () => (
             id="fastfit"
             title="FastFit"
             thumbnail={thumbFastFit}
-            tags={['Freelance', 'Admin Panel', 'Form Handling']}
+            tags={['Admin Panel', 'Form Handling', 'Firebase']}
           >
             Admin panel for managing FastFit's 100+ workouts, 600+ meal plans, 55+ meditation sessions and 34+ yoga programs.
           </WorkGridItem>
@@ -59,7 +59,7 @@ const Works = () => (
             id="where2"
             title="Where2"
             thumbnail={thumbWhere2}
-            tags={['Freelance', 'Dashboard', 'Admin Panel']}
+            tags={['Dashboard', 'Admin Panel']}
           >
             Admin panel for Where2's (Clubs & Bars): oversees establishments, manages user roles, and provides owner-specific dashboards.
           </WorkGridItem>

@@ -103,7 +103,7 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/p1kmr/portfolio-web"
+            href="https://github.com/p1kmr/portfolio-web/tree/feat/v2Char"
             path={path}
             display="inline-flex"
             alignItems="center"
